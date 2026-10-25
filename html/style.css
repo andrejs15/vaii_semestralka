@@ -1,0 +1,574 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #d3d8e0;
+    color: #111;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+    font: inherit;
+}
+
+.page-shell {
+    max-width: 1480px;
+    margin: 50px auto;
+    background: white;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.site-header {
+    display: flex;
+    align-items: center;
+    padding: 20px 35px;
+    border-bottom: 1px solid #ccc;
+}
+
+.brand {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.brand span {
+    font-weight: normal;
+}
+
+.main-nav {
+    display: flex;
+    gap: 45px;
+    margin-left: 120px;
+}
+
+.main-nav a {
+    color: #858181;
+    font-weight: 600;
+}
+
+.main-nav a:hover {
+    color: black;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    margin-left: auto;
+}
+
+.primary-button {
+    padding: 14px 22px;
+    border: none;
+    border-radius: 30px;
+    background: #2563eb;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.primary-button:hover {
+    background: #1e40af;
+}
+
+.avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #d8dee8;
+    font-weight: bold;
+}
+
+
+.application-layout {
+    display: flex;
+    gap: 30px;
+    padding: 30px 35px;
+}
+
+.filters {
+    width: 230px;
+    flex-shrink: 0;
+}
+
+.filters-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.filters h2 {
+    margin: 0;
+    font-size: 17px;
+}
+
+.reset {
+    color: #aaa;
+    font-size: 14px;
+}
+
+.filter-group {
+    margin-bottom: 25px;
+}
+
+.filter-group h3 {
+    margin-bottom: 12px;
+    font-size: 15px;
+    color: #555;
+}
+
+.check-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.check-list label {
+    color: #858181;
+    font-size: 14px;
+}
+
+.check-list input {
+    margin-right: 8px;
+}
+
+.two-fields {
+    display: flex;
+    gap: 10px;
+}
+
+.select-field {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    background: white;
+    color: #858181;
+}
+
+.listings {
+    flex: 1;
+    min-width: 0;
+}
+
+.content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.content-header h1 {
+    margin: 0;
+    font-size: 17px;
+}
+
+.sort {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    color: #858181;
+}
+
+.sort select {
+    border: none;
+    background: white;
+    font-weight: bold;
+}
+
+.card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.property-card {
+    width: calc(50% - 8px);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    background: white;
+}
+
+.image-placeholder {
+    height: 220px;
+    background: #e4e8ed;
+    border-bottom: 1px solid #ddd;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.price {
+    margin: 0 0 8px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.property-name {
+    margin-bottom: 15px;
+    color: #858181;
+}
+
+.property-meta {
+    display: flex;
+    gap: 15px;
+    color: #777;
+    font-size: 14px;
+}
+
+.map-panel {
+    width: 350px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.map-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 700px;
+    background: #e4eaf1;
+    color: #777;
+    font-weight: bold;
+}
+
+.site-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 30px 35px;
+    border-top: 1px solid #ccc;
+    background: #f5f5f5;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 150px;
+}
+
+.footer-column h3 {
+    margin-top: 0;
+    font-size: 15px;
+}
+
+.footer-column p,
+.footer-column a {
+    display: block;
+    margin: 7px 0;
+    color: #777;
+    font-size: 14px;
+}
+
+.footer-intro {
+    flex: 2;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 18px;
+    border-top: 1px solid #ccc;
+    color: #777;
+    font-size: 13px;
+}
+
+.modal-page {
+    position: relative;
+}
+
+.fake-content {
+    opacity: 0.4;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.form-modal {
+    width: 700px;
+    max-height: 95vh;
+    overflow-y: auto;
+
+    padding: 25px;
+
+    border-radius: 15px;
+    background: white;
+}
+
+.form-top {
+    position: relative;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #ccc;
+}
+
+.form-top h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 24px;
+}
+
+.form-top p {
+    color: #777;
+    font-size: 14px;
+}
+
+.close {
+    position: absolute;
+    top: -10px;
+    right: 0;
+
+    color: #777;
+    font-size: 30px;
+}
+
+.property-form {
+    margin-top: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.form-row .field {
+    flex: 1;
+}
+
+.form-row.three .field {
+    width: 33.33%;
+}
+
+.field {
+    margin-bottom: 20px;
+}
+
+.field label,
+.field-title {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.field input,
+.field select,
+.field textarea {
+    width: 100%;
+    padding: 10px 12px;
+
+    border: 1px solid #ccc;
+    border-radius: 6px;
+
+    background: white;
+}
+
+.field textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.counter {
+    display: block;
+    margin-top: 5px;
+
+    color: #999;
+    text-align: right;
+    font-size: 12px;
+}
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    margin-bottom: 20px;
+}
+
+.chip {
+    padding: 8px 12px;
+
+    border: 1px solid #ccc;
+    border-radius: 20px;
+
+    color: #555;
+    font-size: 13px;
+}
+
+.upload-box {
+    display: block;
+
+    padding: 25px;
+    margin-bottom: 20px;
+
+    border: 2px dashed #bbb;
+    border-radius: 8px;
+
+    background: #fafafa;
+
+    color: #777;
+    text-align: center;
+}
+
+.upload-box strong {
+    display: block;
+    margin-bottom: 5px;
+
+    color: #333;
+}
+
+.form-actions {
+    text-align: right;
+}
+
+/* TABLET */
+
+@media (max-width: 1100px) {
+
+    .page-shell {
+        margin: 20px;
+    }
+
+    .application-layout {
+        flex-wrap: wrap;
+    }
+
+    .filters {
+        width: 220px;
+    }
+
+    .listings {
+        flex: 1;
+    }
+
+    .map-panel {
+        width: 100%;
+    }
+
+    .map-placeholder {
+        min-height: 300px;
+    }
+}
+
+/* MOBIL */
+
+@media (max-width: 700px) {
+
+    .page-shell {
+        width: auto;
+        margin: 10px;
+        border-radius: 15px;
+    }
+
+    .site-header {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .main-nav {
+        margin-left: 0;
+    }
+
+    .header-actions {
+        margin-left: 0;
+    }
+
+    .application-layout {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .filters,
+    .listings,
+    .map-panel {
+        width: 100%;
+    }
+
+    .card-grid {
+        flex-direction: column;
+    }
+
+    .property-card {
+        width: 100%;
+    }
+
+    .content-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .two-fields {
+        flex-direction: column;
+    }
+
+    .select-field {
+        width: 100%;
+    }
+
+    .site-footer {
+        flex-direction: column;
+        gap: 20px;
+        padding: 25px 20px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .overlay {
+        position: fixed;
+        overflow-y: auto;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .form-modal {
+        width: 100%;
+        max-height: none;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .form-row.three .field {
+        width: 100%;
+    }
+}

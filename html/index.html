@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="sk">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>RealEstate – rozloženie aplikácie</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="page-shell">
+            <header class="site-header">
+                <a class="brand" href="index.html">
+                    <strong>Real</strong><span>Estate</span>
+                </a>
+
+                <nav class="main-nav" aria-label="Hlavná navigácia">
+                    <a href="#">Buy</a>
+                    <a href="#">Sell</a>
+                    <a href="#">Rent</a>
+                </nav>
+
+                <div class="header-actions">
+                    <a class="primary-button" href="add-listing.html">+ Add Listing</a>
+                    <div class="avatar">U</div>
+                </div>
+            </header>
+
+            <main class="application-layout">
+                <aside class="filters">
+                    <div class="filters-header">
+                        <h2>Filters</h2>
+                        <a class="reset" href="#">Reset filters</a>
+                    </div>
+
+                    <section class="filter-group">
+                        <h3>Property type</h3>
+                        <div class="check-list">
+                            <label><input type="checkbox"> Apartment</label>
+                            <label><input type="checkbox"> Cabin</label>
+                            <label><input type="checkbox"> House</label>
+                            <label><input type="checkbox"> Villa</label>
+                        </div>
+                    </section>
+
+                    <section class="filter-group">
+                        <h3>Style of home</h3>
+                        <div class="check-list">
+                            <label><input type="checkbox"> A-Frame</label>
+                            <label><input type="checkbox"> Bungalow</label>
+                            <label><input type="checkbox"> Cottage</label>
+                            <label><input type="checkbox"> Dome</label>
+                        </div>
+                    </section>
+
+                    <section class="filter-group">
+                        <h3>Price</h3>
+                        <div class="two-fields">
+                            <select class="select-field">
+                                <option>Any</option>
+                                <option>150 000 €</option>
+                            </select>
+                            <select class="select-field">
+                                <option>Any</option>
+                                <option>500 000 €</option>
+                            </select>
+                        </div>
+                    </section>
+
+                    <section class="filter-group">
+                        <h3>Rooms</h3>
+                        <div class="two-fields">
+                            <select class="select-field">
+                                <option>Any</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                            <select class="select-field">
+                                <option>Any</option>
+                                <option>1</option>
+                                <option>2</option>
+                            </select>
+                        </div>
+                    </section>
+
+                    <section class="filter-group">
+                        <h3>Accessibility Features</h3>
+                        <div class="check-list">
+                            <label><input type="checkbox"> Wheelchair accessible</label>
+                            <label><input type="checkbox"> Elevator</label>
+                            <label><input type="checkbox"> Accessible parking</label>
+                        </div>
+                    </section>
+                </aside>
+
+                <section class="listings" aria-labelledby="results-title">
+                    <div class="content-header">
+                        <h1 id="results-title">Showing 4 search results</h1>
+                        <label class="sort">
+                            Sort by:
+                            <select>
+                                <option>Newest</option>
+                                <option>Oldest</option>
+                                <option>Popular</option>
+                            </select>
+                        </label>
+                    </div>
+
+                    <div class="card-grid">
+                        <article class="property-card">
+                            <div class="image-placeholder"></div>
+                            <div class="card-body">
+                                <p class="price">€790 000</p>
+                                <p class="property-name">Premium villa, Trnava</p>
+                                <div class="property-meta">
+                                    <span>🛁 3</span>
+                                    <span>🛏 6</span>
+                                    <span>↔ 260 m²</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="property-card">
+                            <div class="image-placeholder"></div>
+                            <div class="card-body">
+                                <p class="price">€149 000</p>
+                                <p class="property-name">Quiet cottage, Orava</p>
+                                <div class="property-meta">
+                                    <span>🛁 1</span>
+                                    <span>🛏 3</span>
+                                    <span>↔ 92 m²</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="property-card">
+                            <div class="image-placeholder"></div>
+                            <div class="card-body">
+                                <p class="price">€320 000</p>
+                                <p class="property-name">Family house, Žilina</p>
+                                <div class="property-meta">
+                                    <span>🛁 2</span>
+                                    <span>🛏 4</span>
+                                    <span>↔ 160 m²</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="property-card">
+                            <div class="image-placeholder"></div>
+                            <div class="card-body">
+                                <p class="price">€210 000</p>
+                                <p class="property-name">Modern apartment, Bratislava</p>
+                                <div class="property-meta">
+                                    <span>🛁 1</span>
+                                    <span>🛏 2</span>
+                                    <span>↔ 78 m²</span>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <aside class="map-panel" aria-label="Mapa">
+                    <div class="map-placeholder">MAPA</div>
+                </aside>
+            </main>
+
+            <footer class="site-footer">
+                <section class="footer-column footer-intro">
+                    <h3>RealEstate</h3>
+                    <p>Jednoduchá platforma na prehliadanie a správu ponúk nehnuteľností.</p>
+                </section>
+
+                <section class="footer-column">
+                    <h3>Navigácia</h3>
+                    <a href="#">Buy</a>
+                    <a href="#">Sell</a>
+                    <a href="#">Rent</a>
+                </section>
+
+                <section class="footer-column">
+                    <h3>Môj účet</h3>
+                    <a href="#">Prihlásenie</a>
+                    <a href="#">Registrácia</a>
+                    <a href="#">Moje ponuky</a>
+                </section>
+
+                <section class="footer-column">
+                    <h3>Kontakt</h3>
+                    <p>info@realestate.sk</p>
+                    <p>+421 900 000 000</p>
+                </section>
+
+            </footer>
+        </div>
+    </body>
+</html>
