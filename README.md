@@ -61,7 +61,7 @@ Jeden typ môže byť použitý pri viacerých nehnuteľnostiach, pričom nehnut
 ### Štýl bývania – Nehnuteľnosť: vzťah 1:N  
 Jeden štýl môže byť priradený viacerým nehnuteľnostiam.
 
-### ehnuteľnosť – Obrázok nehnuteľnosti: vzťah 1:N
+### Nehnuteľnosť – Obrázok nehnuteľnosti: vzťah 1:N
 Jedna nehnuteľnosť môže mať viac fotografií, pričom každý obrázok patrí jednej nehnuteľnosti.
 
 ### Nehnuteľnosť – Prvok prístupnosti: vzťah M:N
