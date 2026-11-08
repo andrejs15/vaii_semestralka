@@ -79,7 +79,7 @@
                         id="description"
                         name="description"
                         placeholder="Stručný opis nehnuteľnosti..."
-                        required>
+                        required
                 </textarea>
 
                 <span class="counter">

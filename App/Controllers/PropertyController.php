@@ -62,6 +62,10 @@ class PropertyController extends BaseController
     }
 
     public function delete (Request $request): Response {
+        if (!$request->isPost()) {
+            return $this->redirect($this->url('home.index'));
+        }
+
         $id = $request->value('id');
         $property = Property::getOne($id);
         if ($property === null) {

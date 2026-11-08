@@ -10,7 +10,7 @@ create table properties
     baths        int unsigned not null,
     size         int unsigned not null,
     propertyType varchar(255) not null,
-    styleOfHome  varchar(255) not null,
+    styleOfHome  varchar(255) not null
 );
 
 insert into properties
@@ -21,8 +21,8 @@ insert into properties
  rooms,
  baths,
  size,
- property_type,
- style_of_home$)
+ propertyType,
+ styleOfHome)
 values ('Premium villa',
         790000,
         'Trnava',

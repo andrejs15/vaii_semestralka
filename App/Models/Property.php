@@ -6,7 +6,7 @@ use Framework\Core\Model;
 
 class Property extends Model
 {
-    protected static ?string $table = 'properties';
+    protected static ?string $tableName = 'properties';
 
     public ?int $id = null;
 

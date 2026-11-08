@@ -171,9 +171,9 @@
                             <span>🛏 <?= $property->rooms ?></span>
                             <span>↔ <?= $property->size ?> m²</span>
                         </div>
-                        <a href="<?= $link->url('property.edit', ['id' => $property->id]) ?>">
-                            Upraviť
-                        </a>
+                </a>
+                <a href="<?= $link->url('property.edit', ['id' => $property->id]) ?>">
+                    Upraviť
                 </a>
                 <form
                         action="<?= $link->url('property.delete', ['id' => $property->id]) ?>"
