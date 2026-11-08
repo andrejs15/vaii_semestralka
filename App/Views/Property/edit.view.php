@@ -198,6 +198,13 @@
                             Dome
                         </option>
 
+                        <option
+                                value="Spanish"
+                                <?= $property->styleOfHome === 'Spanish' ? 'selected' : '' ?>
+                        >
+                            Spanish
+                        </option>
+
                     </select>
 
                 </div>

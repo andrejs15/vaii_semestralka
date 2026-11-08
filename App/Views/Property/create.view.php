@@ -79,7 +79,7 @@
                         id="description"
                         name="description"
                         placeholder="Stručný opis nehnuteľnosti..."
-                        required
+                        required>
                 </textarea>
 
                 <span class="counter">
@@ -120,6 +120,7 @@
                         <option value="Bungalow">Bungalow</option>
                         <option value="Cottage">Cottage</option>
                         <option value="Dome">Dome</option>
+                        <option value="Spanish">Spanish</option>
                     </select>
                 </div>
             </div>

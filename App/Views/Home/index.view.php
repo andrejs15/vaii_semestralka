@@ -157,10 +157,14 @@
             as $property) { ?>
             <article class="property-card">
                 <a href="<?= $link->url('property.show', ['id' => $property->id]) ?>">
-                    <div class="image-placeholder"></div>
+                    <div class="image-placeholder">
+
+                    </div>
 
                     <div class="card-body">
-                        <p class="price"><?= number_format($property->price, 0, ',', ' ') ?>€</p>
+                        <p class="price">
+                            <?= number_format($property->price, 0, ',', ' ') ?>€
+                        </p>
 
                         <p class="property-name">
                             <?= $property->title ?>, <?= $property->location ?>
@@ -171,6 +175,7 @@
                             <span>🛏 <?= $property->rooms ?></span>
                             <span>↔ <?= $property->size ?> m²</span>
                         </div>
+                    </div>
                 </a>
                 <a href="<?= $link->url('property.edit', ['id' => $property->id]) ?>">
                     Upraviť
