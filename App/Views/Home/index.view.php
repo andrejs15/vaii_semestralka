@@ -152,9 +152,7 @@
 
 
         <div class="card-grid">
-            <?php foreach ($properties
-
-            as $property) { ?>
+            <?php foreach ($properties as $property) { ?>
             <article class="property-card">
                 <a href="<?= $link->url('property.show', ['id' => $property->id]) ?>">
                     <div class="image-placeholder">
@@ -188,9 +186,6 @@
                         Vymazať
                     </button>
                 </form>
-
-        </div>
-
         </article>
         <?php } ?>
         </div>
