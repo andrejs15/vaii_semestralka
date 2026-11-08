@@ -25,15 +25,17 @@
         </div>
 
 
-        <form class="property-form">
+        <form class="property-form" action="<?php echo $link->url('property.store') ?>" method="POST">
 
             <div class="field">
                 <label for="title">Názov</label>
 
                 <input
-                    id="title"
-                    type="text"
-                    placeholder="Napr. Rodinný dom v Žiline"
+                        id="title"
+                        name="title"
+                        type="text"
+                        placeholder="Napr. Rodinný dom v Žiline"
+                        required
                 >
             </div>
 
@@ -44,10 +46,12 @@
                     <label for="price">Cena</label>
 
                     <input
-                        id="price"
-                        type="number"
-                        min="1"
-                        placeholder="€"
+                            id="price"
+                            name="price"
+                            type="number"
+                            min="1"
+                            placeholder="€"
+                            required
                     >
                 </div>
 
@@ -56,9 +60,11 @@
                     <label for="location">Lokalita</label>
 
                     <input
-                        id="location"
-                        type="text"
-                        placeholder="Žilina"
+                            id="location"
+                            name="location"
+                            type="text"
+                            placeholder="Žilina"
+                            required
                     >
                 </div>
 
@@ -70,9 +76,11 @@
                 <label for="description">Popis</label>
 
                 <textarea
-                    id="description"
-                    placeholder="Stručný opis nehnuteľnosti..."
-                ></textarea>
+                        id="description"
+                        name="description"
+                        placeholder="Stručný opis nehnuteľnosti..."
+                        required>
+                </textarea>
 
                 <span class="counter">
                     2000 znakov zostáva
@@ -89,12 +97,12 @@
                         Typ nehnuteľnosti
                     </label>
 
-                    <select id="type">
-                        <option>Vyberte typ</option>
-                        <option>House</option>
-                        <option>Apartment</option>
-                        <option>Villa</option>
-                        <option>Cabin</option>
+                    <select id="type" name="propertyType" required>
+                        <option value="">Vyberte typ</option>
+                        <option value="House">House</option>
+                        <option value="Apartment">Apartment</option>
+                        <option value="Villa">Villa</option>
+                        <option value="Cabin">Cabin</option>
                     </select>
 
                 </div>
@@ -106,21 +114,17 @@
                         Štýl nehnuteľnosti
                     </label>
 
-                    <select id="style">
-                        <option>Vyberte štýl</option>
-                        <option>A-Frame</option>
-                        <option>Bungalow</option>
-                        <option>Cottage</option>
-                        <option>Dome</option>
+                    <select id="style" name="styleOfHome" required>
+                        <option value="">Vyberte štýl</option>
+                        <option value="A-Frame">A-Frame</option>
+                        <option value="Bungalow">Bungalow</option>
+                        <option value="Cottage">Cottage</option>
+                        <option value="Dome">Dome</option>
                     </select>
-
                 </div>
-
             </div>
 
-
             <div class="form-row three">
-
                 <div class="field">
 
                     <label for="rooms">
@@ -128,13 +132,13 @@
                     </label>
 
                     <input
-                        id="rooms"
-                        type="number"
-                        min="1"
+                            id="rooms"
+                            name="rooms"
+                            type="number"
+                            min="1"
+                            required
                     >
-
                 </div>
-
 
                 <div class="field">
 
@@ -143,11 +147,12 @@
                     </label>
 
                     <input
-                        id="baths"
-                        type="number"
-                        min="0"
+                            id="baths"
+                            name="baths"
+                            type="number"
+                            min="0"
+                            required
                     >
-
                 </div>
 
 
@@ -158,18 +163,16 @@
                     </label>
 
                     <input
-                        id="size"
-                        type="number"
-                        min="1"
+                            id="size"
+                            name="size"
+                            type="number"
+                            min="1"
+                            required
                     >
-
                 </div>
-
             </div>
 
-
             <section>
-
                 <p class="field-title">
                     Accessibility features
                 </p>
@@ -216,9 +219,9 @@
                     </span>
 
                     <input
-                        type="file"
-                        hidden
-                        multiple
+                            type="file"
+                            hidden
+                            multiple
                     >
 
                 </label>
@@ -229,16 +232,11 @@
             <div class="form-actions">
 
                 <button
-                    type="button"
-                    class="primary-button"
-                >
+                        type="submit"
+                        class="primary-button">
                     Uložiť
                 </button>
-
             </div>
-
         </form>
-
     </section>
-
 </main>

@@ -304,19 +304,20 @@ textarea {
 }
 
 .overlay {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
 
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 
     width: 100%;
     height: 100%;
 
     padding: 30px;
     background: rgba(0, 0, 0, 0.4);
+
 }
 
 .form-modal {

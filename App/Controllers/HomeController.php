@@ -5,6 +5,7 @@ namespace App\Controllers;
 use Framework\Core\BaseController;
 use Framework\Http\Request;
 use Framework\Http\Responses\Response;
+use App\Models\Property;
 
 /**
  * Class HomeController
@@ -39,7 +40,7 @@ class HomeController extends BaseController
      */
     public function index(Request $request): Response
     {
-        return $this->html();
+        return $this->html(['properties' => Property::getAll(null,[], 'id DESC')]);
     }
 
     /**

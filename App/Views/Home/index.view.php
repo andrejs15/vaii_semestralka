@@ -1,5 +1,6 @@
 <?php
 /** @var \Framework\Support\LinkGenerator $link */
+/** @var \App\Models\Property[] $properties */
 ?>
 
 <main class="application-layout">
@@ -134,7 +135,7 @@
         <div class="content-header">
 
             <h1 id="results-title">
-                Showing 4 search results
+                Showing <?php echo count($properties) ?> search results
             </h1>
 
             <label class="sort">
@@ -151,84 +152,43 @@
 
 
         <div class="card-grid">
+            <?php foreach ($properties
 
+            as $property) { ?>
             <article class="property-card">
-                <div class="image-placeholder"></div>
+                <a href="<?= $link->url('property.show', ['id' => $property->id]) ?>">
+                    <div class="image-placeholder"></div>
 
-                <div class="card-body">
-                    <p class="price">€790 000</p>
+                    <div class="card-body">
+                        <p class="price"><?= number_format($property->price, 0, ',', ' ') ?>€</p>
 
-                    <p class="property-name">
-                        Premium villa, Trnava
-                    </p>
+                        <p class="property-name">
+                            <?= $property->title ?>, <?= $property->location ?>
+                        </p>
 
-                    <div class="property-meta">
-                        <span>🛁 3</span>
-                        <span>🛏 6</span>
-                        <span>↔ 260 m²</span>
-                    </div>
-                </div>
-            </article>
-
-
-            <article class="property-card">
-                <div class="image-placeholder"></div>
-
-                <div class="card-body">
-                    <p class="price">€149 000</p>
-
-                    <p class="property-name">
-                        Quiet cottage, Orava
-                    </p>
-
-                    <div class="property-meta">
-                        <span>🛁 1</span>
-                        <span>🛏 3</span>
-                        <span>↔ 92 m²</span>
-                    </div>
-                </div>
-            </article>
-
-
-            <article class="property-card">
-                <div class="image-placeholder"></div>
-
-                <div class="card-body">
-                    <p class="price">€320 000</p>
-
-                    <p class="property-name">
-                        Family house, Žilina
-                    </p>
-
-                    <div class="property-meta">
-                        <span>🛁 2</span>
-                        <span>🛏 4</span>
-                        <span>↔ 160 m²</span>
-                    </div>
-                </div>
-            </article>
-
-
-            <article class="property-card">
-                <div class="image-placeholder"></div>
-
-                <div class="card-body">
-                    <p class="price">€210 000</p>
-
-                    <p class="property-name">
-                        Modern apartment, Bratislava
-                    </p>
-
-                    <div class="property-meta">
-                        <span>🛁 1</span>
-                        <span>🛏 2</span>
-                        <span>↔ 78 m²</span>
-                    </div>
-                </div>
-            </article>
+                        <div class="property-meta">
+                            <span>🛁 <?= $property->baths ?></span>
+                            <span>🛏 <?= $property->rooms ?></span>
+                            <span>↔ <?= $property->size ?> m²</span>
+                        </div>
+                        <a href="<?= $link->url('property.edit', ['id' => $property->id]) ?>">
+                            Upraviť
+                        </a>
+                </a>
+                <form
+                        action="<?= $link->url('property.delete', ['id' => $property->id]) ?>"
+                        method="POST"
+                >
+                    <button type="submit">
+                        Vymazať
+                    </button>
+                </form>
 
         </div>
 
+        </article>
+        <?php } ?>
+        </div>
     </section>
 
 
